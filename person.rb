@@ -1,5 +1,15 @@
 class Person
 
+	attr_reader :age, :occupation, :mood
+
+	def initialize(age, occupation, mood)
+		@age = age
+		@occupation = occupation
+		@mood = mood
+		puts "New person"
+		info
+	end
+
 	def set_age(a)
 		@age = a
 	end
@@ -10,18 +20,6 @@ class Person
 
 	def set_mood(m)
 		@mood = m
-	end
-
-	def age
-		puts @age
-	end
-
-	def occupation
-		puts @occupation
-	end
-
-	def mood
-		puts @mood
 	end
 
 	def info
