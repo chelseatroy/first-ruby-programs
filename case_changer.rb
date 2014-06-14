@@ -1,6 +1,7 @@
 puts "Please enter six words."
 
 @words = []
+
 @case = 1
 
 def gets_words
@@ -12,18 +13,13 @@ end
 
 def puts_words
 	@words.each do |word|
-		prints_word_in_case(word)
-	end
-end
-
-def prints_word_in_case(w)
-	if @case == 1
-		puts w.upcase
-		@case = 0
-	else
-		puts w.downcase
-		@case = 1
-	end
+		if @case == 1
+			puts word.upcase
+			@case = 0
+		else
+			puts word.downcase
+			@case = 1
+		end
 end
 
 gets_words
